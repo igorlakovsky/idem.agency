@@ -1,0 +1,64 @@
+.header {
+  display: flex;
+  height: 110px;
+  padding: 0px 165px;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.header__logo,
+.header__info {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo__img {
+  padding-top: 4px;
+  padding-right: 16px;
+}
+
+.header__logo__text {
+  font-family: "Euclid Circular B";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 41px;
+  color: black;
+}
+
+.header__info__number {
+  font-family: "Euclid Circular B";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  color: black !important;
+}
+
+.header__info__button {
+  width: 187px;
+  height: 47px;
+  margin-left: 32px;
+  background: #ffdf31;
+  border-radius: 8px;
+  border: none;
+}
+
+.header__info__button:hover {
+  background: #dd8e19;
+}
+
+.header__info__button:hover span {
+  transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  color: white;
+}
+
+.header__info__button span {
+  font-family: "Euclid Circular B";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  color: black;
+  transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
