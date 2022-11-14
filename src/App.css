@@ -1,9 +1,15 @@
 .header {
+  height: auto;
+  padding: 0;
+  background-color: white;
+}
+
+.header__wrapper {
   display: flex;
   height: 110px;
-  padding: 0px 165px;
+  max-width: 1110px;
+  margin: auto;
   justify-content: space-between;
-  background-color: white;
 }
 
 .header__logo,
@@ -61,4 +67,45 @@
   line-height: 23px;
   color: black;
   transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.content {
+  background: white;
+}
+
+.banner {
+  background: #f5f5f5;
+}
+
+.banner__wrapper {
+  max-width: 1110px;
+  margin: auto;
+}
+
+.banner__content {
+  display: flex !important;
+  justify-content: space-between;
+}
+
+.banner__content__slogan {
+  width: 271px;
+  font-family: "Euclid Circular B";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 66px;
+  color: #000000;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding-top: 48px;
+}
+
+.banner__arrow {
+  width: 44px !important;
+  position: absolute;
+  color: black !important;
+  background-color: white !important;
+}
+
+.banner__arrow:hover {
+  background-color: #dfdfdf !important;
 }
