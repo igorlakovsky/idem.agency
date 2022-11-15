@@ -1,8 +1,7 @@
-import "./App.css";
+import { Button, Image, Layout } from "antd";
 
-import { Button, Carousel, Image, Layout } from "antd";
-
-import Banner from "./Banner";
+import { Banner } from "./Banner";
+import { Cards } from "./Cards";
 
 const { Header, Footer, Content } = Layout;
 
@@ -15,7 +14,7 @@ function App() {
             <div className="header__logo">
               <Image
                 className="header__logo__img"
-                src="logo.png"
+                src="img/logo.png"
                 preview={false}
               />
               <div className="header__logo__text">гросс маркет</div>
@@ -30,8 +29,9 @@ function App() {
         </Header>
         <Content className="content">
           <Banner />
+          <Cards />
         </Content>
-        {/* <Footer>Footer</Footer> */}
+        <Footer>Footer</Footer>
       </Layout>
     </>
   );
