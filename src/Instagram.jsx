@@ -64,7 +64,7 @@ export function Instagram() {
             if (photoRowCount < 2) setPhotoRowCount(photoRowCount + 1);
           }}
         >
-          показать еще
+          показать ещё
         </Button>
       </div>
     </div>

@@ -1,8 +1,9 @@
-import { Button, Col, Image, Layout, Row } from "antd";
+import { Button, Image, Layout } from "antd";
 
 import { Banner } from "./Banner";
 import { Cards } from "./Cards";
 import { Instagram } from "./Instagram";
+import { Location } from "./Location";
 
 const { Header, Footer, Content } = Layout;
 
@@ -32,6 +33,7 @@ function App() {
           <Banner />
           <Cards />
           <Instagram />
+          <Location />
         </Content>
         <Footer>Footer</Footer>
       </Layout>
