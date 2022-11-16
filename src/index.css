@@ -372,6 +372,57 @@ code {
   color: #000000 !important;
 }
 
+.ant-modal-title {
+  padding: 50px 0px 0px 60px;
+  font-family: "Euclid Circular B";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 36px;
+  color: #000000;
+}
+
+.ant-modal-header {
+  border: none;
+}
+
+.ant-modal-body {
+  padding: 50px 90px;
+}
+
+.ant-modal-footer {
+  display: none;
+}
+
+.modal__title {
+  font-family: "Euclid Circular B";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  color: #000000;
+  padding-bottom: 24px;
+}
+
+.modal__text {
+  font-family: "Euclid Circular B";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  margin-bottom: 48px;
+}
+
+.modal__text span {
+  color: #b3b3b3;
+}
+
+.ant-modal-close-x {
+  font-size: 26px;
+  margin: 26px;
+}
+
 @media (max-width: 768px) {
   .banner__content {
     flex-wrap: wrap;
@@ -394,6 +445,17 @@ code {
   }
   .footer {
     margin-top: 0px;
+  }
+  .ant-modal-body {
+    padding: 20px 40px;
+  }
+  .ant-modal-title {
+    padding: 40px 0px 4px 12px;
+    font-size: 36px;
+  }
+  .ant-modal-close-x {
+    font-size: 28px;
+    margin: 10px;
   }
 }
 
