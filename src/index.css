@@ -536,8 +536,16 @@ code {
   .banner__arrow {
     display: none;
   }
-  .header__info {
+  .header__info__number {
     display: none;
+  }
+  .header__info__button {
+    position: fixed;
+    left: 10vw;
+    width: 70vw;
+    z-index: 100;
+    bottom: 30px;
+    justify-content: center;
   }
   .header__icon {
     display: block;
