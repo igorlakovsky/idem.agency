@@ -1,14 +1,14 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
-import { Form } from "./Form";
 import Home from "./Home";
+import { Registation } from "./Registation";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/form" element={<Form />}></Route>
+        <Route path="/form" element={<Registation />}></Route>
       </Routes>
     </Router>
   );

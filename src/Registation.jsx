@@ -1,16 +1,35 @@
-import { Button, Col, Image, Layout, Modal, Row } from "antd";
+import {
+  Button,
+  Checkbox,
+  Col,
+  DatePicker,
+  Form,
+  Image,
+  Input,
+  Layout,
+  Modal,
+  Radio,
+  Row,
+  Select,
+  Upload,
+} from "antd";
 
+import { CloseOutlined } from "@ant-design/icons";
+import ReCAPTCHA from "react-google-recaptcha";
+import { UploadOutlined } from "@ant-design/icons";
 import { useState } from "react";
 
 const { Header, Footer, Content } = Layout;
+const { TextArea } = Input;
+const { Option } = Select;
 
-export function Form() {
+export function Registation() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <>
       <Layout style={{ background: "transparent" }}>
-        <Header className="header">
+        <Header className="header header_form">
           <div className="header__wrapper">
             <div className="header__logo">
               <Image
@@ -20,20 +39,198 @@ export function Form() {
               />
               <div className="header__logo__text">гросс маркет</div>
             </div>
-            <div className="header__info">
-              <a className="header__info__number" href="tel:+79264331416">
-                +7 (926) 433-14-16
-              </a>
-              <Button className="header__info__button">заполнить анкету</Button>
-            </div>
-            <div className="header__icon">
-              <a href="tel:+79264331416">
-                <Image src="img/icon-phone.png" preview={false} />
-              </a>
+            <div className="header__close_form">
+              <Button href="/" type="link" icon={<CloseOutlined />}></Button>
             </div>
           </div>
         </Header>
-        <Content className="content"></Content>
+        <Content className="content">
+          <div className="form__wrapper">
+            <div className="form__title">Работа твоей мечты</div>
+            <Row gutter={[60, 0]}>
+              <Col lg={12} sm={24} xs={24}>
+                <Form
+                  layout="vertical"
+                  name="basic"
+                  size="large"
+                  initialValues={{
+                    remember: true,
+                  }}
+                  onFinish={() => {}}
+                  onFinishFailed={() => {}}
+                  autoComplete="off"
+                >
+                  <Row gutter={[30, 0]}>
+                    <Col lg={24} sm={24} xs={24}>
+                      <Form.Item
+                        label="Вакансия"
+                        name="vacancy"
+                        rules={[
+                          {
+                            required: true,
+                            message: "Выберете название вакансии!",
+                          },
+                        ]}
+                      >
+                        <Select className="form__input">
+                          <Option value="товаровед"></Option>
+                          <Option value="водитель"></Option>
+                          <Option value="пекарь"></Option>
+                          <Option value="кассир"></Option>
+                          <Option value="продавец"></Option>
+                          <Option value="повар"></Option>
+                          <Option value="приёмщик"></Option>
+                        </Select>
+                      </Form.Item>
+                    </Col>
+                    <Col lg={24} sm={24} xs={24}>
+                      <Form.Item
+                        label="ФИО"
+                        name="name"
+                        rules={[
+                          {
+                            required: true,
+                            message: "Введите ФИО!",
+                          },
+                        ]}
+                      >
+                        <Input className="form__input" />
+                      </Form.Item>
+                    </Col>
+                    <Col lg={12} sm={12} xs={24}>
+                      <Form.Item
+                        label="Дата рождения"
+                        name="data"
+                        rules={[
+                          {
+                            required: true,
+                            message: "Укажите дату рождения!",
+                          },
+                        ]}
+                      >
+                        <DatePicker
+                          className="form__input"
+                          style={{ width: "100%" }}
+                        />
+                      </Form.Item>
+                    </Col>
+                    <Col lg={12} sm={12} xs={24}>
+                      <Form.Item
+                        label="Пол"
+                        name="gender"
+                        rules={[
+                          {
+                            required: true,
+                            message: "Выберете пол!",
+                          },
+                        ]}
+                      >
+                        <Radio.Group size="large">
+                          <Radio value={1} className="form__input">
+                            Мужской
+                          </Radio>
+                          <Radio value={2} className="form__input">
+                            Женский
+                          </Radio>
+                        </Radio.Group>
+                      </Form.Item>
+                    </Col>
+                    <Col lg={12} sm={12} xs={24}>
+                      <Form.Item
+                        label="Контактный телефон"
+                        name="phone"
+                        rules={[
+                          {
+                            required: true,
+                            message: "Укажите телефон!",
+                          },
+                        ]}
+                      >
+                        <Input className="form__input" />
+                      </Form.Item>
+                    </Col>
+                    <Col lg={12} sm={12} xs={24}>
+                      <Form.Item label="Электронная почта" name="email">
+                        <Input className="form__input" />
+                      </Form.Item>
+                    </Col>
+                    <Col lg={24} sm={24} xs={24}>
+                      <Form.Item label="Резюме" name="resume">
+                        <TextArea className="form__input" />
+                        <Upload>
+                          <Button
+                            block
+                            icon={<UploadOutlined />}
+                            style={{ marginTop: "20px" }}
+                            className="form__input"
+                          >
+                            выберете или перетащите файл
+                          </Button>
+                        </Upload>
+                      </Form.Item>
+                    </Col>
+
+                    <Col lg={24} sm={24} xs={24}>
+                      <Form.Item label="" name="agreement">
+                        <Checkbox className="form__input">
+                          я подтверждаю согласие на обработку персональных
+                          данных и принимаю условия рассмотрения обращений *
+                        </Checkbox>
+                      </Form.Item>
+                    </Col>
+
+                    <Col lg={24} sm={24} xs={24}>
+                      <Form.Item label="" name="send">
+                        <Button
+                          block
+                          style={{ marginTop: "30px" }}
+                          htmlType="submit"
+                        >
+                          Отправить
+                        </Button>
+                      </Form.Item>
+                    </Col>
+                    <Col lg={24} sm={24} xs={24}>
+                      <Form.Item label="" name="lol">
+                        <div
+                          className="form__input"
+                          style={{
+                            opacity: 0.3,
+                          }}
+                        >
+                          * поля для обязательного заполнения
+                        </div>
+                      </Form.Item>
+                    </Col>
+                    <Col lg={24} sm={24} xs={24}>
+                      <Form.Item label="Капча" name="lol">
+                        <ReCAPTCHA
+                          sitekey="6LfSHQ8jAAAAAJ2vypE42eW-mC3vZ1YFr17U27WE"
+                          size=""
+                        />
+                      </Form.Item>
+                    </Col>
+                  </Row>
+                </Form>
+              </Col>
+              <Col lg={12} sm={24} xs={24}>
+                <div className="form__info">Наша суперцель</div>
+                <div className="form__text">
+                  — стать любимым магазином для каждой российской семьи.
+                  <br />
+                  <br />
+                  Сотни тысяч наших сотрудников ежедневно работают над её
+                  достижением.
+                  <br />
+                  <br />
+                  Мы уверены, что в ближайшие годы достигнем этого и будет
+                  здорово,если вместе с тобой.
+                </div>
+                <div className="form__phone">+7 (926) 433-14-16</div>
+              </Col>
+            </Row>
+          </div>
+        </Content>
         <Footer className="footer">
           <div className="footer__wrapper">
             <Row

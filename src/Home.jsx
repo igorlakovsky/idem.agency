@@ -28,7 +28,9 @@ export function Home() {
               <a className="header__info__number" href="tel:+79264331416">
                 +7 (926) 433-14-16
               </a>
-              <Button className="header__info__button">заполнить анкету</Button>
+              <Button className="header__info__button" href="/form">
+                заполнить анкету
+              </Button>
             </div>
             <div className="header__icon">
               <a href="tel:+79264331416">
