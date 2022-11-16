@@ -9,18 +9,18 @@ export function Instagram() {
     let ret = [];
     for (var i = 0; i < photoRowCount * 2; i++) {
       ret.push(
-        <Col span={12} key={i}>
+        <Col lg={12} md={24} sm={24} xs={24} key={i}>
           <Row gutter={[30, 30]}>
-            <Col span={12}>
+            <Col lg={12} md={12} sm={12} xs={24}>
               <div className="instagram__photo"></div>
             </Col>
-            <Col span={12}>
+            <Col lg={12} md={12} sm={12} xs={24}>
               <div className="instagram__photo"></div>
             </Col>
-            <Col span={12}>
+            <Col lg={12} md={12} sm={12} xs={24}>
               <div className="instagram__photo"></div>
             </Col>
-            <Col span={12}>
+            <Col lg={12} md={12} sm={12} xs={24}>
               <div className="instagram__photo"></div>
             </Col>
           </Row>
@@ -35,21 +35,21 @@ export function Instagram() {
       <div className="instagram__wrapper">
         <div className="instagram__title">мы в инстаграме</div>
         <Row gutter={[30, 30]} className="instagram__row">
-          <Col span={12}>
+          <Col lg={12}>
             <div className="instagram__photo"></div>
           </Col>
-          <Col span={12}>
+          <Col lg={12} md={24} sm={24} xs={24}>
             <Row gutter={[30, 30]}>
-              <Col span={12}>
+              <Col lg={12} md={12} sm={12} xs={24}>
                 <div className="instagram__photo"></div>
               </Col>
-              <Col span={12}>
+              <Col lg={12} md={12} sm={12} xs={24}>
                 <div className="instagram__photo"></div>
               </Col>
-              <Col span={12}>
+              <Col lg={12} md={12} sm={12} xs={24}>
                 <div className="instagram__photo"></div>
               </Col>
-              <Col span={12}>
+              <Col lg={12} md={12} sm={12} xs={24}>
                 <div className="instagram__photo"></div>
               </Col>
             </Row>

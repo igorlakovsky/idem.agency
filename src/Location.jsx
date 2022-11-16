@@ -58,7 +58,7 @@ export function Location() {
             state={{
               center: [55.755423, 37.620583],
               zoom: 12,
-              behaviors: [],
+              // behaviors: [],
             }}
             options={{
               suppressMapOpenBlock: true,

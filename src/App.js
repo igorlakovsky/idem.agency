@@ -27,6 +27,11 @@ function App() {
               </a>
               <Button className="header__info__button">заполнить анкету</Button>
             </div>
+            <div className="header__icon">
+              <a href="tel:+79264331416">
+                <Image src="img/icon-phone.png" preview={false} />
+              </a>
+            </div>
           </div>
         </Header>
         <Content className="content">
@@ -37,8 +42,13 @@ function App() {
         </Content>
         <Footer className="footer">
           <div className="footer__wrapper">
-            <Row gutter={[48, 48]} className="footer__row" align="middle">
-              <Col span={12}>
+            <Row
+              gutter={[48, 0]}
+              className="footer__row"
+              align="middle"
+              justify="space-between"
+            >
+              <Col md={12} sm={16} xs={24}>
                 <div className="header__logo">
                   <Image
                     className="header__logo__img"
@@ -48,10 +58,10 @@ function App() {
                   <div className="header__logo__text">гросс маркет</div>
                 </div>
               </Col>
-              <Col span={8}>
+              <Col md={8} sm={0} xs={0}>
                 <div className="footer__share">поделиться</div>
               </Col>
-              <Col span={4} className="footer__share__icons">
+              <Col md={4} sm={8} xs={0} className="footer__share__icons">
                 <Image
                   className="footer__share__icon"
                   src="img/icon-facebook.png"
@@ -64,9 +74,14 @@ function App() {
                 />
               </Col>
             </Row>
-            <Row gutter={[48, 48]} className="footer__info" align="middle">
-              <Col span={12}>© Гросс маркет 2020</Col>
-              <Col span={12}>
+            <Row
+              gutter={[48, 0]}
+              className="footer__info"
+              align="middle"
+              justify="space-between"
+            >
+              <Col md={12}>© Гросс маркет 2020</Col>
+              <Col md={12}>
                 <Button type="link" className="footer__info__policy">
                   Политика обработки персональных данных
                 </Button>

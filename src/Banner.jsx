@@ -66,6 +66,7 @@ export function Banner() {
         <Carousel
           arrows
           autoplay
+          adaptiveHeight
           autoplaySpeed={5000}
           dots={false}
           effect="fade"
@@ -75,13 +76,21 @@ export function Banner() {
         >
           <div className="banner__content">
             <div className="banner__content__slogan">У тебя к этому талант</div>
-            <Image src="img/banner_1.png" preview={false} />
+            <Image
+              src="img/banner_1.png"
+              preview={false}
+              className="banner__content__image"
+            />
           </div>
           <div className="banner__content">
             <div className="banner__content__slogan">
               У тебя всё под контролем
             </div>
-            <Image src="img/banner_2.png" preview={false} />
+            <Image
+              src="img/banner_2.png"
+              preview={false}
+              className="banner__content__image"
+            />
           </div>
         </Carousel>
       </div>

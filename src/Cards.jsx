@@ -23,6 +23,26 @@ export function Cards() {
           infinite={false}
           prevArrow={<PrevArrow right="42px" top="-72px" />}
           nextArrow={<NextArrow right="0px" top="-72px" />}
+          responsive={[
+            // {
+            //   breakpoint: 1024,
+            //   settings: {
+            //     slidesToShow: 3,
+            //   },
+            // },
+            {
+              breakpoint: 900,
+              settings: {
+                slidesToShow: 2,
+              },
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 1,
+              },
+            },
+          ]}
         >
           <Card
             name="товаровед"
