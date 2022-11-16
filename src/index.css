@@ -294,3 +294,53 @@ code {
 .map__button_active {
   background-color: #ffdf31 !important;
 }
+
+.footer {
+  padding: 0;
+  margin-top: 72px;
+  padding-top: 72px;
+}
+
+.footer__wrapper {
+  max-width: 1110px;
+  margin: auto;
+}
+
+.footer__row {
+  background-color: white;
+  height: 90px;
+  border-radius: 8px;
+}
+
+.footer__share {
+  font-family: "Euclid Circular B";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 41px;
+  color: black;
+}
+
+.footer__share__icons {
+  text-align: end;
+}
+
+.footer__share__icon {
+  padding-left: 8px;
+}
+
+.footer__info {
+  height: 74px;
+  font-family: "Euclid Circular B";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.footer__info__policy {
+  padding: 0;
+  border: 0;
+  color: #000000 !important;
+}

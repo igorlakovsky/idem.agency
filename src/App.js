@@ -1,4 +1,4 @@
-import { Button, Image, Layout } from "antd";
+import { Button, Col, Image, Layout, Row } from "antd";
 
 import { Banner } from "./Banner";
 import { Cards } from "./Cards";
@@ -35,7 +35,45 @@ function App() {
           <Instagram />
           <Location />
         </Content>
-        <Footer>Footer</Footer>
+        <Footer className="footer">
+          <div className="footer__wrapper">
+            <Row gutter={[48, 48]} className="footer__row" align="middle">
+              <Col span={12}>
+                <div className="header__logo">
+                  <Image
+                    className="header__logo__img"
+                    src="img/logo.png"
+                    preview={false}
+                  />
+                  <div className="header__logo__text">гросс маркет</div>
+                </div>
+              </Col>
+              <Col span={8}>
+                <div className="footer__share">поделиться</div>
+              </Col>
+              <Col span={4} className="footer__share__icons">
+                <Image
+                  className="footer__share__icon"
+                  src="img/icon-facebook.png"
+                  preview={false}
+                />
+                <Image
+                  className="footer__share__icon"
+                  src="img/icon-vk.png"
+                  preview={false}
+                />
+              </Col>
+            </Row>
+            <Row gutter={[48, 48]} className="footer__info" align="middle">
+              <Col span={12}>© Гросс маркет 2020</Col>
+              <Col span={12}>
+                <Button type="link" className="footer__info__policy">
+                  Политика обработки персональных данных
+                </Button>
+              </Col>
+            </Row>
+          </div>
+        </Footer>
       </Layout>
     </>
   );
